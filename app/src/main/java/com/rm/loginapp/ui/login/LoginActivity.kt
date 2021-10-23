@@ -15,6 +15,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.rm.loginapp.R
 import com.rm.loginapp.databinding.ActivityLoginBinding
 
+/**
+ * LoginActivity
+ */
 class LoginActivity : AppCompatActivity() {
 
   private lateinit var loginViewModel: LoginViewModel
