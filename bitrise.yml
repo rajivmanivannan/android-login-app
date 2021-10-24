@@ -54,7 +54,7 @@ workflows:
                 # debug log
                 set -x
 
-                cd appium-bitrise-ci
+                cd appium-login-app-automation
                 mvn clean test -Pandroid
 
                 cd
