@@ -1,6 +1,7 @@
 package com.rm.loginapp.ui.login
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -14,6 +15,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.rm.loginapp.R
 import com.rm.loginapp.databinding.ActivityLoginBinding
+import com.rm.loginapp.ui.home.HomeActivity
 
 /**
  * LoginActivity
@@ -103,13 +105,7 @@ class LoginActivity : AppCompatActivity() {
   private fun updateUiWithUser(model: LoggedInUserView) {
     val welcome = getString(R.string.welcome)
     val displayName = model.displayName
-    // TODO : initiate successful logged in experience
-    Toast.makeText(
-      applicationContext,
-      "$welcome $displayName",
-      Toast.LENGTH_LONG
-    )
-      .show()
+    startActivity(Intent(this, HomeActivity::class.java))
   }
 
   private fun showLoginFailed(@StringRes errorString: Int) {
